@@ -1,13 +1,15 @@
 # Redux, relay, graphql, react-router boilerplate.
 
-# Install
+## Install
 
-## npm i
-## npm start
+```
+  npm i
+  npm start
+```
 
 # Description
 
-## I have been trying create a convenient boilerplate with all newest libs. On this moment the boilerplate contains this list of libraries:
+I have been trying create a convenient boilerplate with all newest libs. On this moment the boilerplate contains this list of libraries:
 
   - [React]
   - [Redux]
