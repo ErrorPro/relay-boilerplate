@@ -12,7 +12,7 @@ import {
 const {nodeInterface, nodeField} = nodeDefinitions(
   (globalId, {rootValue}) => {
     const {type, id} = fromGlobalId(globalId);
-
+    console.log(type)
     if (id === 'viewer') {
       return rootValue;
     }
@@ -20,6 +20,7 @@ const {nodeInterface, nodeField} = nodeDefinitions(
     return rootValue;
   },
   (obj) => {
+    console.log(obj)
     return refs.viewer;
   }
 )

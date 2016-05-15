@@ -15,7 +15,10 @@ export default class DeleteUserMutation extends Relay.Mutation {
     return Relay.QL`
       fragment on DeleteUserPayload {
         deleteId
-        viewer { users }
+        viewer {
+          users
+          user
+       }
       }
     `;
   }
@@ -30,6 +33,10 @@ export default class DeleteUserMutation extends Relay.Mutation {
         pathToConnection: ['viewer', 'users'],
         deletedIDFieldName: 'deleteId',
       },
+      {
+        type: 'FIELDS_CHANGE',
+        fieldIDs: {viewer: 'viewer'},
+      }
     ];
   }
 }

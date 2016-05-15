@@ -1,1 +1,1 @@
-export {default as todoList} from './todoList';
+export {default as userPreview} from './userPreview';

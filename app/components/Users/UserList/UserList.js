@@ -2,7 +2,11 @@ import React, {Component} from 'React';
 
 export default class UserListContainer extends Component {
   render() {
-    const { list, onAddUserClick, addForm } = this.props;
+    const {
+      list, 
+      addForm,
+      userPreview,
+    } = this.props;
 
     return (
       <div>
@@ -10,6 +14,7 @@ export default class UserListContainer extends Component {
         <ul>
           {list}
         </ul>
+        {userPreview}
       </div>
     )
   };

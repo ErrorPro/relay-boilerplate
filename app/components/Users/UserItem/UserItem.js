@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default class AddUser extends React.Component {
   render() {
-    const { user, deleteUser } = this.props;
+    const { user, deleteUser, onSetPreview } = this.props;
 
     return (
       <li>
@@ -11,6 +11,7 @@ export default class AddUser extends React.Component {
           <span>{user.name}</span>
         </Link>
         <span onClick={() => deleteUser(user.id)}> Delete </span>
+        <span onClick={() => onSetPreview(user.id)}> Preview </span>
       </li>
     )
   }
