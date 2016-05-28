@@ -34,6 +34,7 @@ export default compose(
       }
     }),
     (stateProps, dispatchProps, parentProps) => ({
+      ...parentProps,
       list: parentProps.viewer.users.edges.map((edge, index) => (
         <UserItemContainer key={index} user={edge.node} onSetPreview={dispatchProps.setPreview}/>
       )),

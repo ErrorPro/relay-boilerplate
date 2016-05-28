@@ -1,13 +1,14 @@
 import React, {Component} from 'React';
+import forceFetch from './forceFetch';
 
 export default class UserListContainer extends Component {
   render() {
     const {
-      list, 
+      list,
       addForm,
       userPreview,
     } = this.props;
-
+    console.log(this.props)
     return (
       <div>
         {addForm}
@@ -15,6 +16,7 @@ export default class UserListContainer extends Component {
           {list}
         </ul>
         {userPreview}
+        <button onClick={() => /*this.props.relay.forceFetch()*/ forceFetch()}>forceFetch</button>
       </div>
     )
   };
